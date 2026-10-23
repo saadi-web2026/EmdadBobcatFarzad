@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="امداد بابکت فرزاد؛ معرفی خدمات تعمیر بابکت، فروش قطعات یدکی و فروش پاکت بابکت.">
+    <meta name="author" content="EMDAD BOBCAT FARZAD">
+    <meta name="theme-color" content="#e52235">
+    <title>امداد بابکت فرزاد | EMDAD BOBCAT FARZAD</title>
+
+    <style>
+        :root {
+            --red: #e52235;
+            --red-dark: #bd1427;
+            --black: #202124;
+            --gray: #6f7378;
+            --light: #f6f7f8;
+            --white: #ffffff;
+            --border: #e7e8ea;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        .top-bar {
+            background: var(--red);
+            color: white;
+            padding: 7px 0;
+            font-size: 12px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        header {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 3px 15px #00000006;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 14px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--red);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            font-weight: 900;
+            border-radius: 9px;
+        }
+
+        .brand-text h1 {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .brand-text p {
+            color: var(--gray);
+            font-size: 10px;
+            direction: ltr;
+            text-align: right;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            font-size: 13px;
+            transition: color .2s;
+        }
+
+        nav a:hover {
+            color: var(--red);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 21px;
+            border-radius: 7px;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+            transition: .2s;
+        }
+
+        .btn-red {
+            background: var(--red);
+            color: white;
+        }
+
+        .btn-red:hover {
+            background: var(--red-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-light {
+            background: white;
+            border: 1px solid var(--border);
+            color: var(--black);
+        }
+
+        .btn-light:hover {
+            border-color: var(--red);
+            color: var(--red);
+        }
+
+        .hero {
+            background: linear-gradient(115deg, #fff1f2, #ffffff 65%, #f8f8f8);
+            padding: 85px 0;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            align-items: center;
+            gap: 42px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--red);
+            background: #ffe5e8;
+            padding: 5px 13px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 30px;
+            margin-bottom: 17px;
+        }
+
+        .hero h2 {
+            font-size: clamp(30px, 4.5vw, 49px);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 span {
+            color: var(--red);
+        }
+
+        .hero p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 25px;
+            max-width: 690px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 11px;
+        }
+
+        .hero-visual {
+            min-height: 290px;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 18px 45px #00000009;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .hero-visual .machine {
+            font-size: 92px;
+            line-height: 1.6;
+        }
+
+        .hero-visual h3 {
+            font-size: 22px;
+        }
+
+        .hero-visual p {
+            font-size: 11px;
+            color: var(--gray);
+            direction: ltr;
+            letter-spacing: 1px;
+            margin: 3px 0 0;
+        }
+
+        .quick-bar {
+            background: white;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 22px 0;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .quick-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .quick-item span {
+            font-size: 26px;
+        }
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 35px;
+        }
+
+        .section-heading.center {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-label {
+            color: var(--red);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(24px, 4vw, 34px);
+            line-height: 1.8;
+            margin: 7px 0;
+        }
+
+        .section-heading p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .about {
+            background: var(--light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 38px;
+            align-items: center;
+        }
+
+        .about-panel {
+            min-height: 310px;
+            background: var(--black);
+            color: white;
+            border-radius: 15px;
+            border-bottom: 6px solid var(--red);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-panel .big-text {
+            color: #ff6674;
+            font-size: 34px;
+            font-weight: 900;
+            direction: ltr;
+            text-align: right;
+            line-height: 1.5;
+        }
+
+        .about-panel p {
+            color: #d5d5d5;
+            font-size: 13px;
+            margin-top: 13px;
+        }
+
+        .about-text h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 13px;
+        }
+
+        .services {
+            background: white;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 27px;
+            transition: .25s;
+        }
+
+        .service-card:hover {
+            border-color: #f2a3ab;
+            box-shadow: 0 12px 30px #00000008;
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff0f2;
+            border-radius: 12px;
+            font-size: 29px;
+            margin-bottom: 17px;
+        }
+
+        .service-card h3 {
+            font-size: 17px;
+            margin-bottom: 9px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .service-card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--red);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .contact {
+            background: #fff4f5;
+        }
+
+        .contact-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: white;
+            border: 1px solid #f0dfe1;
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .contact-card h3 {
+            font-size: 19px;
+            margin-bottom: 14px;
+        }
+
+        .contact-card p {
+            font-size: 13px;
+            color: var(--gray);
+            margin-bottom: 12px;
+        }
+
+        .contact-card strong {
+            color: var(--black);
+        }
+
+        .phone {
+            display: inline-block;
+            direction: ltr;
+            color: var(--red);
+            font-size: 21px;
+            font-weight: bold;
+            margin: 5px 0 15px;
+        }
+
+        .address-placeholder {
+            color: var(--red);
+            font-weight: bold;
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: #202124;
+            color: white;
+            padding: 32px 0 18px;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-content h3 {
+            color: #ff6674;
+            font-size: 18px;
+        }
+
+        .footer-content p {
+            color: #cccccc;
+            font-size: 12px;
+        }
+
+        .copyright {
+            border-top: 1px solid #414247;
+            margin-top: 22px;
+            padding-top: 15px;
+            text-align: center;
+            color: #bdbdbd;
+            font-size: 11px;
+        }
+
+        @media (max-width: 850px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero-grid,
+            .about-grid,
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 560px) {
+            .top-bar-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                gap: 10px 14px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 55px 0;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .hero-visual .machine {
+                font-size: 75px;
+            }
+
+            .quick-grid,
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <span>تعمیرات بابکت | قطعات یدکی | پاکت بابکت</span>
+            <span>EMDAD BOBCAT FARZAD</span>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-content">
+            <a href="#home" class="brand">
+                <div class="brand-icon">EF</div>
+                <div class="brand-text">
+                    <h1>امداد بابکت فرزاد</h1>
+                    <p>EMDAD BOBCAT FARZAD</p>
+                </div>
+            </a>
+
+            <nav>
+                <a href="#home">صفحه اصلی</a>
+                <a href="#about">درباره ما</a>
+                <a href="#services">خدمات</a>
+                <a href="#contact">تماس و آدرس</a>
+            </nav>
+
+            <a href="tel:09128357521" class="btn btn-red">تماس با ما</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow">معرفی خدمات ماشین‌آلات بابکت</span>
+                    <h2>
+                        امداد بابکت فرزاد؛
+                        <br>
+                        <span>تعمیرات، قطعات و پاکت بابکت</span>
+                    </h2>
+                    <p>
+                        به وب‌سایت امداد بابکت فرزاد خوش آمدید.
+                        در این مجموعه با زمینه فعالیت‌های مرتبط با تعمیرات
+                        بابکت، فروش قطعات یدکی و فروش پاکت بابکت آشنا شوید.
+                        برای دریافت اطلاعات بیشتر درباره خدمات، با مجموعه
+                        تماس بگیرید یا به آدرس درج‌شده مراجعه کنید.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-red">آشنایی با خدمات</a>
+                        <a href="#contact" class="btn btn-light">اطلاعات تماس و آدرس</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="machine">🚜</div>
+                    <h3>امداد بابکت فرزاد</h3>
+                    <p>EMDAD BOBCAT FARZAD</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="quick-bar">
+            <div class="container quick-grid">
+                <div class="quick-item"><span>🔧</span> تعمیرات بابکت</div>
+                <div class="quick-item"><span>⚙️</span> فروش قطعات یدکی</div>
+                <div class="quick-item"><span>🪣</span> فروش پاکت بابکت</div>
+            </div>
+        </div>
+
+        <section class="about" id="about">
+            <div class="container about-grid">
+                <div class="about-panel">
+                    <span class="section-label">درباره مجموعه</span>
+                    <div class="big-text">EMDAD<br>BOBCAT<br>FARZAD</div>
+                    <p>معرفی خدمات تعمیرات و تأمین قطعات و متعلقات ماشین‌آلات بابکت.</p>
+                </div>
+
+                <div class="about-text">
+                    <div class="section-heading">
+                        <span class="section-label">شناخت برند</span>
+                        <h2>درباره امداد بابکت فرزاد</h2>
+                    </div>
+                    <p>
+                        امداد بابکت فرزاد در زمینه تعمیرات بابکت، فروش قطعات
+                        یدکی و فروش پاکت بابکت فعالیت دارد. این وب‌سایت برای
+                        معرفی مجموعه، توضیح زمینه خدمات و فراهم کردن راه ارتباط
+                        با مشتریان طراحی شده است.
+                    </p>
+                    <p>
+                        انتخاب قطعه یا پاکت مناسب به مدل دستگاه، مشخصات فنی
+                        و نوع کاربرد آن بستگی دارد. برای کسب اطلاعات دقیق‌تر،
+                        مدل دستگاه و نیاز خود را هنگام تماس اعلام کنید.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-heading center">
+                    <span class="section-label">زمینه فعالیت</span>
+                    <h2>خدمات امداد بابکت فرزاد</h2>
+                    <p>معرفی سه حوزه اصلی فعالیت مجموعه؛ بدون فروشگاه اینترنتی و ثبت سفارش آنلاین.</p>
+                </div>
+
+                <div class="service-grid">
+                    <article class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>تعمیرات بابکت</h3>
+                        <p>
+                            معرفی خدمات تعمیر و بررسی مشکلات فنی ماشین‌آلات بابکت.
+                            برای اطلاع از نوع تعمیرات و هماهنگی، با مجموعه تماس بگیرید.
+                        </p>
+                        <a href="tel:09128357521">تماس درباره تعمیرات ←</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">⚙️</div>
+                        <h3>فروش قطعات یدکی بابکت</h3>
+                        <p>
+                            معرفی زمینه تأمین قطعات یدکی بابکت. برای بررسی سازگاری
+                            قطعه، مدل دستگاه و مشخصات فنی آن را اعلام کنید.
+                        </p>
+                        <a href="tel:09128357521">تماس درباره قطعات ←</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🪣</div>
+                        <h3>فروش پاکت بابکت</h3>
+                        <p>
+                            معرفی خدمات مرتبط با پاکت بابکت. برای اطلاع از نوع،
+                            ابعاد و سازگاری پاکت با دستگاه خود تماس بگیرید.
+                        </p>
+                        <a href="tel:09128357521">تماس درباره پاکت ←</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-heading center">
+                    <span class="section-label">راه‌های ارتباطی</span>
+                    <h2>تماس با امداد بابکت فرزاد</h2>
+                    <p>برای دریافت اطلاعات درباره خدمات مجموعه، از راه‌های ارتباطی زیر استفاده کنید.</p>
+                </div>
+
+                <div class="contact-box">
+                    <div class="contact-card">
+                        <h3>اطلاعات تماس</h3>
+                        <p><strong>نام مجموعه:</strong> امداد بابکت فرزاد</p>
+                        <p><strong>نام انگلیسی:</strong> EMDAD BOBCAT FARZAD</p>
+                        <p><strong>شماره تماس:</strong></p>
+                        <a href="tel:09128357521" class="phone">09128357521</a>
+                        <div class="contact-actions">
+                            <a href="tel:09128357521" class="btn btn-red">تماس تلفنی</a>
+                            <a href="sms:09128357521" class="btn btn-light">ارسال پیامک</a>
+                            <a href="https://wa.me/989128357521" target="_blank" rel="noopener noreferrer" class="btn btn-light">واتساپ</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>آدرس مجموعه</h3>
+                        <p>
+                            برای مراجعه حضوری، تهران.آیت الله سعیدی.خیابان سهیل شمالی.روبروی شهرک بخارای.گاراژ ثانوی(امداد باب کت).
+                        </p>
+                        <p class="address-placeholder">آدرس: لطفاً شهر، خیابان و نشانی دقیق را وارد کنید.</p>
+                        <p>
+https://maps.app.goo.gl/J75JcX7jbEJA173V6  
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>امداد بابکت فرزاد</h3>
+                <p>تعمیرات بابکت | قطعات یدکی | پاکت بابکت</p>
+                <a href="tel:09128357521">تماس: 09128357521</a>
+            </div>
+            <div class="copyright">
+                EMDAD BOBCAT FARZAD
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
